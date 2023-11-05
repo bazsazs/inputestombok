@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tömbök</title>
+</head>
+<body>
+    <script>
+    function legyenVeletlenSorrend(tomb) {
+        let ujTomb = [];
+    
+        // Lépések végrehajtása
+        const index1 = 2;
+        ujTomb.push(tomb[index1]);
+        tomb.splice(index1, 1);
+    
+        const index2 = 5;
+        ujTomb.push(tomb[index2]);
+        tomb.splice(index2, 1);
+    
+        const index3 = 1;
+        ujTomb.push(tomb[index3]);
+        tomb.splice(index3, 1);
+    
+        const index4 = 0;
+        ujTomb.push(tomb[index4]);
+        tomb.splice(index4, 1);
+    
+        const index5 = 2;
+        ujTomb.push(tomb[index5]);
+        tomb.splice(index5, 1);
+    
+        const index6 = 0;
+        ujTomb.push(tomb[index6]);
+        tomb.splice(index6, 1);
+    
+        // Az eredeti tömb utolsó elemét hozzáadni az új tömbhöz
+        ujTomb.push(tomb.pop());
+    
+        return ujTomb;
+    }
+    
+    // Teszteld a függvényt!
+    console.log(legyenVeletlenSorrend(["hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat", "vasárnap"]));
+    console.log(legyenVeletlenSorrend(["h", "k", "sze", "cs", "p", "szo", "v"]));
+    console.log(legyenVeletlenSorrend([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+</script>
+    
+</body>
+</html>
